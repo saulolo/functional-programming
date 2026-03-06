@@ -1,0 +1,4 @@
+La programación funcional en Java, introducida fuertemente desde Java 8, es un paradigma declarativo que prioriza el uso
+de funciones puras, inmutabilidad de datos y evita efectos secundarios. Se basa en expresiones lambda, interfaces
+funcionales (como Predicate, Function, Consumer) y la Stream API para procesar colecciones de forma concisa y legible,
+enfocándose en qué hacer en lugar de cómo.

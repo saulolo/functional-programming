@@ -77,7 +77,7 @@ public class OperatorsEmployeeMain {
                 .mapToInt(Employee::getAge)
                 .summaryStatistics();
         System.out.println("Estadisticas => " + sumAgesStatistics);
-        System.out.println("Si quiero uno de los valores ==> Suma: " + sumAgesStatistics.getSum());
+        System.out.println("Si quiero uno de los valores ==> Suma: " + sumAgesStatistics.getAverage());
 
         System.out.println("\n== ✂️ reduce(): Combina todos los elementos de un flujo (stream) en un único resultado final. ==");
         System.out.println("Quitar todas las comas del texto y crear otro nuevo a partir del anterior. ");
@@ -120,8 +120,8 @@ public class OperatorsEmployeeMain {
         System.out.println("El empleado con mayor edad tiene: " + maxAge + " y el de menor edad tiene: " + minAge);
 
         System.out.println("\n== 🧮 coun(): Cuenta la cantidad de elementos de una lista. ==");
-        long countEmployees = employees.stream().count();
-        //long countEmployees = employees.size();
+        //long countEmployees = employees.stream().count();
+        long countEmployees = employees.size();
 
         System.out.println("El total de empleados existentes es: " + countEmployees);
 

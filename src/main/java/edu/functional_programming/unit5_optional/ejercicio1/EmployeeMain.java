@@ -25,10 +25,12 @@ public class EmployeeMain {
 
         try {
             Optional<Employee> employee = employeeController.findEmployeeByEmail(email);
-            System.out.println("\nEmpleado encontrado:");
-            System.out.println(employee);
+            employee.ifPresent(emp -> {
+                System.out.println("\nEmpleado encontrado:");
+                System.out.println(emp);
+            });
         } catch (EmployeeNotFoundException e) {
-            System.out.println("\n❌ " + e.getMessage());
+            System.out.println("\nError: " + e.getMessage());
         }
 
     }

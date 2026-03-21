@@ -20,8 +20,8 @@ public class Attention {
     Integer cost;
 
     /**
-     * Retorna la representación en texto del estudiante en formato de fila de tabla.
-     * @return String con los datos del estudiante alineados en columnas.
+     * Retorna la representación en texto de la atencion en formato de fila de tabla.
+     * @return String con los datos de la atención alineados en columnas.
      */
     @Override
     public String toString() {
@@ -33,7 +33,7 @@ public class Attention {
 
     /**
      * Imprime en consola una tabla formateada con encabezado, filas y total de atenciones.
-     * @param students Lista de estudiantes a imprimir.
+     * @param attentions Lista de atenciones a imprimir.
      */
     public static void printTable(List<Attention> attentions) {
         String header = String.format(

@@ -71,7 +71,7 @@ public class AttentionMain {
         return attentions.stream()
                 .filter(att -> att.getService().equalsIgnoreCase("Consulta"))
                 .map(Attention::getPetName)
-                .sorted()
+                .sorted(String.CASE_INSENSITIVE_ORDER)
                 .toList();
     }
 
@@ -111,7 +111,7 @@ public class AttentionMain {
                 .filter(att -> att.getCost() > 15_000)
                 .map(Attention::getTutorName)
                 .distinct()
-                .sorted()
+                .sorted(String.CASE_INSENSITIVE_ORDER)
                 .toList();
     }
 

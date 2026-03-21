@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
+
 /**
  * Ejercicios de Programación funcional con Java Streams.
  * @author Saul Echeverri
@@ -24,7 +26,7 @@ public class StudentMain {
 
         //2. Obtener la lista de nombres de todos los estudiantes.
         System.out.println("\nEjercicio 2 => Nombres de los estudiantes: ");
-        List<String> studentsNames = getStudentsFromFirstName(students);
+        List<Student> studentsNames = getStudentsFromFirstName(students);
         System.out.println(studentsNames);
         //studentsNames.forEach(System.out::println);
 
@@ -199,7 +201,7 @@ public class StudentMain {
      */
     public static List<Student> getStudentsFromGrade11(List<Student> students) {
         return students.stream()
-                .filter(s -> s.getGrade() == 11)
+                .filter(s -> s.getFirstName().contains("A"))
                 .toList();
     }
 
@@ -208,9 +210,18 @@ public class StudentMain {
      * @param students Lista de estudiantes.
      * @return Lista de nombres de los estudiantes.
      */
-    public static List<String> getStudentsFromFirstName(List<Student> students) {
+/*    public static List<String> getStudentsFromFirstName(List<Student> students) {
         return students.stream()
                 .map(Student::getFirstName)
+                .toList();
+    }*/
+
+    public static List<Student> getStudentsFromFirstName(List<Student> students) {
+        return students.stream()
+                .map(student -> {
+                    student.setLastName("Gonzales");
+                    return student;
+                })
                 .toList();
     }
 
@@ -321,7 +332,7 @@ public class StudentMain {
                         Student::getGrade,
                         Collectors.mapping(
                                 Student::getFirstName,
-                                Collectors.toList()
+                                toList()
                         )
                 ));
     }

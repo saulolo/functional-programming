@@ -1,4 +1,4 @@
-package edu.functional_programming.unit1_Introduction.ejercicioAlumnos;
+package edu.functional_programming.unit7_EjerciciosRecopilatorios.ejercicio4_Alumnos;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

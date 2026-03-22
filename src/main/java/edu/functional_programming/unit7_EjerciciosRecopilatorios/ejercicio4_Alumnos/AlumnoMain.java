@@ -1,10 +1,8 @@
-package edu.functional_programming.unit1_Introduction.ejercicioAlumnos;
+package edu.functional_programming.unit7_EjerciciosRecopilatorios.ejercicio4_Alumnos;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class AlumnoMain {
 

@@ -162,8 +162,8 @@ public class VehiculoMain {
      */
     private static Map<Modelo, List<Vehiculo>> obtenerVehiculosAgrupadosPorModelo(List<Vehiculo> vehiculoList) {
         return vehiculoList.stream()
-                .collect(Collectors.groupingBy(
-                        Vehiculo::getModelo));
+                .collect(Collectors
+                        .groupingBy(Vehiculo::getModelo));
     }
 
     /**
